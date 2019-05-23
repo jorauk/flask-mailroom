@@ -15,6 +15,9 @@ def home():
 def all():
     donations = Donation.select()
     return render_template('donations.jinja2', donations=donations)
+
+@app.route('/create', methods=['GET', 'POST'])
+def create():
     
 
 if __name__ == "__main__":
